@@ -1,0 +1,50 @@
+[build-system]
+requires = [
+    "setuptools>=61.0.0",
+    "setuptools-scm>=8.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coursera"
+dynamic = ["version"]
+description = "Assignments and projects for Coursera coursework."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy",
+    "pandas",
+    "torch",
+    "ruff",
+]
+
+[tool.ruff]
+include = ["src/nomad_analysis/*.py", "tests/*.py"]
+line-length = 88
+indent-width = 4
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # isort
+    "I",
+    # pylint
+    "PL",
+]
+ignore = [
+    "F403", # 'from module import *' used; unable to detect undefined names
+]
+fixable = ["ALL"]
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
