@@ -6,7 +6,7 @@ This sub-directory contains the project work for the completion of
 Link to the project: 
 https://www.coursera.org/learn/ai-deep-learning-capstone/home/welcome
 
-# Project
+## Project
 
 In the project, we implement a ML pipeline for an image classification
 problem. Given an image, the goal is to detect whether it has
