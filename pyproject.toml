@@ -16,6 +16,9 @@ dependencies = [
     "pandas",
     "torch",
     "ruff",
+    "jupyter",
+    "matplotlib",
+    "scikit-learn",
 ]
 
 [tool.ruff]
